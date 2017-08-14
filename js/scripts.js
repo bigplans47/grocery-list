@@ -4,12 +4,12 @@ $(document).ready(function() {
     var newBlanks = blanks.map(function(blank) {
       return ($(blank).val()).toUpperCase();
       });
+    $("#input").hide();
     newBlanks.sort();
-      // $("#story").show();
-      alert(newBlanks);
     newBlanks.forEach(function(newBlank) {
       $("#output").append("<li>" + newBlank + "</li>");
     });
+    $("#output").show();
     event.preventDefault();
   });
 });
